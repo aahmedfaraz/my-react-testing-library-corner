@@ -2,7 +2,21 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+describe('App', () => {
+  
+  beforeEach(() => {
+    render(<App />);
+  })
+
+  test('should render itself', () => {
+    const appContainer = screen.getByTestId('app');
+    expect(appContainer).toBeInTheDocument();
+  });
+
+  test('should render nav', () => {
+    const navbar = screen.getByTestId('nav');
+    expect(navbar).toBeInTheDocument();
+  });
+  
+})
+
