@@ -90,3 +90,8 @@ Visit [https://testing-library.com/docs/react-testing-library/cheatsheet#queries
 # Events
 
 [See all supported events](https://github.com/testing-library/dom-testing-library/blob/main/src/event-map.js)
+
+# HTML Element Roles
+
+- [Requirements for use of ARIA attributes in place of equivalent HTML attributes.](https://www.w3.org/TR/html-aria/#docconformance-attr)
+- [Full Documentation, ARIA in HTML - W3C Proposed Recommendation](https://www.w3.org/TR/html-aria/#docconformance)

@@ -15,12 +15,18 @@ body {
 nav {
   background-color: var(--theme-color-blue);
   color: white;
-  padding: 20px 30px;
+  padding: 10px 20px;
   text-align: center;
   box-shadow: 0 3px 5px rgba(128, 128, 128, 0.6);
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    flex-direction: column;
+  }
 }
 
 .github-link {
@@ -130,7 +136,7 @@ fieldset small {
 
 .click-event-button {
   cursor: pointer;
-  margin-right: 10px;
+  margin: 5px;
   border: 0;
   background: linear-gradient(
     to bottom,
