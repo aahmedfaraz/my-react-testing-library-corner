@@ -66,14 +66,15 @@ main p {
   margin: 0 auto;
   text-align: center;
   font-size: 13px;
-  color: rgb(83, 83, 83);
+  color: rgb(131, 131, 131);
 }
 
 main h1 {
   color: var(--theme-color-blue);
   padding: 20px;
-  margin: 0 50px;
+  margin: 20px 5vw;
   text-align: center;
+  border-top: 1px solid rgb(230, 230, 230);
   border-bottom: 1px solid rgb(230, 230, 230);
 }
 
