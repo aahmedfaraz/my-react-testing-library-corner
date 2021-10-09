@@ -12,6 +12,25 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h4 {
+  margin-top: 10px;
+  color: rgb(255, 73, 41);
+}
+.output-image {
+  width: 450px;
+  max-width: calc(100% - 20px);
+  margin: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
 nav {
   background-color: var(--theme-color-blue);
   color: white;
