@@ -1,14 +1,16 @@
 import React from 'react';
-
+// Material UI Components
 import { Stack, Button, IconButton, Icon, Typography } from '@mui/material';
-import { InfoOutlined, Info, AddCircle, AccountCircle, Add } from '@mui/icons-material';
+// Material UI Icons
+import { InfoOutlined, Info, AddCircle, AccountCircle } from '@mui/icons-material';
+
 const MaterialUIForm = () => {
     return (
         <div>
             {/* Test 1 */}
             <fieldset>
                 <legend><label>⚗️ Test 1</label></legend>
-                <Stack direction="row" spacing={2}>
+                <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
                     <Button data-testid="mui-button" variant="outlined" color="primary" onClick={() => {
                         const text : any= document.getElementById('mui-button-text');
                         text.innerHTML = '👋 Hi there Champ.';
@@ -22,7 +24,7 @@ const MaterialUIForm = () => {
                         text.innerHTML = '☀️ Good Afternoon Champ.';
                     }}>It's Afternoon</Button>
                 </Stack>
-                <Typography variant="h5"  id="text1" data-testid="text1" paddingBottom={2} color="primary">Click any button.</Typography>
+                <Typography variant="h5"  id="mui-button-text" data-testid="mui-button-text" paddingBottom={2} color="primary">Click any button.</Typography>
             </fieldset>
 
             {/* Test 2 */}
@@ -40,7 +42,6 @@ const MaterialUIForm = () => {
                     <AddCircle data-testid="mui-add" color="secondary" />
                     <AccountCircle data-testid="mui-account" color="secondary" />
                 </Stack>
-
             </fieldset>
 
             {/* Test 3 */}

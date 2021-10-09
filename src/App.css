@@ -19,7 +19,20 @@ main {
   justify-content: center;
 }
 
-h4 {
+main h3 {
+  color: var(--theme-color-blue);
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 0;
+  width: 600px;
+  max-width: 100%;
+}
+
+main h3 span {
+  color: rgb(56, 56, 56);
+}
+
+main h4 {
   margin-top: 10px;
   color: rgb(255, 73, 41);
 }
