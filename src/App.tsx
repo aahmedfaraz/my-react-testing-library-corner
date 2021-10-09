@@ -6,6 +6,7 @@ import FormTestsOutput from './assets/images/form_tests_output.png';
 // React Components
 import Navbar from './components/layout/Navbar';
 import Form from './components/layout/Form';
+import MaterialUIForm from './components/material-ui/MaterialUIForm';
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
         <Form />
         <h4>Form Tests Output</h4>
         <img className="output-image" src={FormTestsOutput} alt="Form Tests Output" />
+        <h1>Testing Material UI Elements <small>using '@testing-library/react'</small></h1>
+        <MaterialUIForm />
       </main>
     </div>
   );
