@@ -40,7 +40,7 @@ const Form = () => {
                     }}
                 />
                 <small><strong>Check:</strong> username must be alphanumeric and contain 5 - 12 characters.</small>
-                <small data-testid="badge" 
+                <small data-testid="username-badge" 
                     className={`${
                         validation.username === null ? 'nostatus' : validation.username ? 'success' : 'error'
                     } badge`}
@@ -70,7 +70,7 @@ const Form = () => {
                     }}
                 />
                 <small><strong>Check:</strong> email must be a valid address, e.g. ahmedfaraz.contact@gmail.com.</small>
-                <small data-testid="badge" 
+                <small data-testid="email-badge" 
                     className={`${
                         validation.email === null ? 'nostatus' : validation.email ? 'success' : 'error'
                     } badge`}
@@ -100,7 +100,7 @@ const Form = () => {
                     }}
                 />
                 <small><strong>Check:</strong> phone must be a valid PK telephone number (11 digits - 03xxxxxx).</small>
-                <small data-testid="badge" 
+                <small data-testid="phone-badge" 
                     className={`${
                         validation.phone === null ? 'nostatus' : validation.phone ? 'success' : 'error'
                     } badge`}
@@ -130,7 +130,7 @@ const Form = () => {
                     }}
                 />
                 <small><strong>Check:</strong> password must be alphanumeric ( `@` , `_` and `-` are allowed) and be 8 - 20 characters.</small>
-                <small data-testid="badge" 
+                <small data-testid="password-badge" 
                     className={`${
                         validation.password === null ? 'nostatus' : validation.password ? 'success' : 'error'
                     } badge`}
@@ -160,7 +160,7 @@ const Form = () => {
                     }}
                 /> Anonymous: For Error message</span>
                 <small><strong>Check:</strong> occupation must be selected.</small>
-                <small data-testid="badge" 
+                <small data-testid="occupation-badge" 
                     className={`${
                         validation.occupation === null ? 'nostatus' : validation.occupation ? 'success' : 'error'
                     } badge`}
@@ -230,7 +230,7 @@ const Form = () => {
                 }}
                 /> Anonymous: For Error message</span>
                 <small><strong>Check:</strong> hobbies can be more than one.</small>
-                <small data-testid="badge" 
+                <small data-testid="hobbies-badge" 
                     className={`${
                         validation.hobbies === null ? 'nostatus' : validation.hobbies ? 'success' : 'error'
                     } badge`}
@@ -243,22 +243,22 @@ const Form = () => {
 
             {/* TEST 7 */}
             <fieldset>
-                <legend><label htmlFor="click-event">🧪 Test 7</label></legend>
+                <legend><label>🧪 Test 7</label></legend>
                 <span>
                     <button data-testid="click-event-greeting" onClick={e => {
                         e.preventDefault();
                         const text : any = document.getElementById('click-event-text');
-                        text.innerText = '👋 Hi there Champ.';
+                        text.innerHTML = '👋 Hi there Champ.';
                     }} className="click-event-button">Greetings</button>
                     <button data-testid="click-event-morning" onClick={e => {
                         e.preventDefault();
                         const text : any = document.getElementById('click-event-text');
-                        text.innerText = '🌄 Good Morning Champ.';
+                        text.innerHTML = '🌄 Good Morning Champ.';
                     }} className="click-event-button">It's Morning</button>
                     <button data-testid="click-event-afternoon" onClick={e => {
                         e.preventDefault();
                         const text : any = document.getElementById('click-event-text');
-                        text.innerText = '☀️ Good Afternoon Champ.'
+                        text.innerHTML = '☀️ Good Afternoon Champ.'
                     }} className="click-event-button">It's Afternoon</button>
                 </span>
                 <small><strong>Check:</strong> Click button and text on it should display.</small>

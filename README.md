@@ -95,3 +95,7 @@ Visit [https://testing-library.com/docs/react-testing-library/cheatsheet#queries
 
 - [Requirements for use of ARIA attributes in place of equivalent HTML attributes.](https://www.w3.org/TR/html-aria/#docconformance-attr)
 - [Full Documentation, ARIA in HTML - W3C Proposed Recommendation](https://www.w3.org/TR/html-aria/#docconformance)
+
+# Tips
+
+- I have found if I was using ❌`.innerText` to update any text of an element, it was not accessible by 👉`.toHaveTextContent` of **React Testing Library**, **SOLUTION** is rather than ❌`.innerText` use ✔️`.innerHTML` to update text of any element, then it will work perfectly.
