@@ -7,68 +7,49 @@ describe('MaterialUIForm Component', () => {
     beforeEach(() => render(<MaterialUIForm />));
     afterEach(cleanup);
 
-    test('should render MUI Button', () => {
-        const muiButton = screen.getByTestId('mui-button');
-        expect(muiButton).toBeInTheDocument();
-        expect(muiButton).toHaveTextContent('Ahmed');
-    })
+    // Field set 1
+    // mui-button 3
+    // mui-button-text
 
-    test('should have MUI Button working properly', () => {
-        const muiButton = screen.getByTestId('mui-button');
-        const text1 = screen.getByTestId('text1');
-
-        expect(text1).toHaveTextContent('Ahmed');
-        fireEvent.click(muiButton);
-        expect(text1).toHaveTextContent('Faraz');
-    })
+    // Field set 2
+    // icon-heading 2
+    // mat-done mat-info mat-check
+    // mui-info mui-add mui-account
     
-    test('should have Google Icon button working properly when click on IconButton', () => {
-        const iconButton = screen.getByTestId('google-icon-button');
-        const text2 = screen.getByTestId('text2');
+    // Field set 3
+    // mat-icon-button
+    // mat-home-icon
+    // mat-icon-button-text
 
-        expect(iconButton).toBeInTheDocument();
-        expect(text2).toBeInTheDocument();
-        expect(text2).toHaveTextContent('Ahmed2');
-
-        fireEvent.click(iconButton);
-        expect(text2).toHaveTextContent('Faraz2');
-    })
+    // Field set 4
+    // mui-icon-button
+    // mui-info-icon
+    // mui-icon-button-text
     
-    test('should have Google Icon button working properly when click on icon only', () => {
-        const icon = screen.getByTestId('google-home-icon');
-        const text2 = screen.getByTestId('text2');
+    // Field set 5
+    // card 2
+    // card-header
+    // card-react-button
+    // card-action-area
+    // card-media
 
-        expect(icon).toBeInTheDocument();
-        expect(icon).toHaveTextContent('home');
-        expect(text2).toBeInTheDocument();
-        expect(text2).toHaveTextContent('Ahmed2');
+    // Field set 6
+    // list-list-item 4
+    // list-list-item-icon 4
+    // list-list-item-text 4
 
-        fireEvent.click(icon);
-        expect(text2).toHaveTextContent('Faraz2');
-    })
-
-    test('should have MUI Icon button working properly when click on IconButton', () => {
-        const iconButton = screen.getByTestId('mui-icon-button');
-        const text3 = screen.getByTestId('text3');
-
-        expect(iconButton).toBeInTheDocument();
-        expect(text3).toBeInTheDocument();
-        expect(text3).toHaveTextContent('Ahmed3');
-
-        fireEvent.click(iconButton);
-        expect(text3).toHaveTextContent('Faraz3');
-    })
     
-    test('should have MUI Icon button working properly when click on icon only', () => {
-        const icon = screen.getByTestId('mui-info-icon');
-        const text3 = screen.getByTestId('text3');
-
-        expect(icon).toBeInTheDocument();
-        expect(text3).toBeInTheDocument();
-        expect(text3).toHaveTextContent('Ahmed3');
-
-        fireEvent.click(icon);
-        expect(text3).toHaveTextContent('Faraz3');
-    })
+    // Field set 7
+    // modal-open-button
+    // modal
+    // modal-title
+    // modal-text
+    // modal-close-button
     
+    // Field set 8
+    // drawer-open-button
+    // drawer
+    // drawer-list-item 4
+    // drawer-list-item-icon 4
+    // drawer-list-item-text 4
 })

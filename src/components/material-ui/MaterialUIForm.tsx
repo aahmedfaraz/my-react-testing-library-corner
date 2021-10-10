@@ -36,13 +36,13 @@ const MaterialUIForm = () => {
             <fieldset>
                 <legend><label>⚗️ Test 2</label></legend>
                 <small><strong>Check: React-Testing Library will check Icons rendering.</strong></small>
-                <Typography variant="h6">Material Icons from Google Icons</Typography>
+                <Typography data-testid="icon-heading" variant="h6">Material Icons from Google Icons</Typography>
                 <Stack direction="row" spacing={2}>
-                    <Icon data-testid="done-icon" color="secondary">done</Icon>
-                    <Icon data-testid="info-icon" color="secondary">info</Icon>
-                    <Icon data-testid="check-icon" color="secondary">check_circle</Icon>
+                    <Icon data-testid="mat-done" color="secondary">done</Icon>
+                    <Icon data-testid="mat-info" color="secondary">info</Icon>
+                    <Icon data-testid="mat-check" color="secondary">check_circle</Icon>
                 </Stack>
-                <Typography variant="h6">Material UI Icons from MUI Site</Typography>
+                <Typography data-testid="icon-heading" variant="h6">Material UI Icons from MUI Site</Typography>
                 <Stack direction="row" spacing={2}>
                     <Info data-testid="mui-info" color="secondary" />
                     <AddCircle data-testid="mui-add" color="secondary" />
@@ -56,16 +56,16 @@ const MaterialUIForm = () => {
                 <small><strong>Check: React-Testing Library will check all elements rendering and material icon's functionality.</strong></small>
                 <Typography variant="h5">Clickable Material Icon from Google Icons</Typography>
                 <Typography variant="subtitle2">Click Icon below to Change text</Typography>
-                <IconButton data-testid="google-icon-button"
+                <IconButton data-testid="mat-icon-button"
                     onClick={() => {
-                        const text : any= document.getElementById("google-icon-button-text");
+                        const text : any= document.getElementById("mat-icon-button-text");
                         text.innerHTML = 'This is 🏠Home icon.';
                     }}
                     color="primary"
                 >
-                    <Icon data-testid="google-home-icon">home</Icon>
+                    <Icon data-testid="mat-home-icon">home</Icon>
                 </IconButton>
-                <Typography variant="h5" id="google-icon-button-text" data-testid="google-icon-button-text" paddingBottom={2} color="primary">This is default text.</Typography>
+                <Typography data-testid="mat-icon-button-text" variant="h5" id="mat-icon-button-text" paddingBottom={2} color="primary">This is default text.</Typography>
             </fieldset>
 
             {/* Test 4 */}
@@ -82,7 +82,7 @@ const MaterialUIForm = () => {
                 >
                     <InfoOutlined color="secondary" data-testid="mui-info-icon" />
                 </IconButton>
-                <Typography variant="h5" id="mui-icon-button-text" data-testid="mui-icon-button-text" paddingBottom={2} color="secondary">This is default text.</Typography>
+                <Typography data-testid="mui-icon-button-text" variant="h5" id="mui-icon-button-text" paddingBottom={2} color="secondary">This is default text.</Typography>
             </fieldset>
 
             {/* Test 5 */}
@@ -90,21 +90,22 @@ const MaterialUIForm = () => {
                 <legend><label></label>⚗️ Test 5</legend>
                 <small><strong>Check: React-Testing Library will check cards rendering and functionality.</strong></small>
                 <small>Simple Card</small>
-                <Card>
-                    <CardHeader title="React" />
+                <Card data-testid="card">
+                    <CardHeader data-testid="card-header" title="React" />
                     <CardContent>
                         <Typography variant="h4">Definition</Typography>
                         <Typography variant="subtitle1">A JavaScript library for building user interfaces</Typography>
                     </CardContent>
                     <CardActions>
-                        <Button target="_blank" href="https://reactjs.org/">Read More</Button>
+                        <Button data-testid="card-react-button" target="_blank" href="https://reactjs.org/">Read More</Button>
                     </CardActions>
                 </Card>
                 <br />
                 <small>Clickable Card</small>
-                <Card>
-                    <CardActionArea target="_blank" href="https://en.wikipedia.org/wiki/Andromeda_Galaxy">
+                <Card data-testid="card">
+                    <CardActionArea data-testid="card-action-area" target="_blank" href="https://en.wikipedia.org/wiki/Andromeda_Galaxy">
                         <CardMedia
+                            data-testid="card-media"
                             component="img"
                             height="200"
                             alt="space"
@@ -122,36 +123,36 @@ const MaterialUIForm = () => {
                 <legend><label></label>⚗️ Test 6</legend>
                 <small><strong>Check: React-Testing Library will check list items rendering.</strong></small>
                 <List>
-                    <ListItem disablePadding>
+                    <ListItem data-testid="list-list-item" disablePadding>
                         <ListItemButton>
                             <ListItemIcon>
-                                <AccountCircle />
+                                <AccountCircle data-testid="list-list-item-icon" />
                             </ListItemIcon>
-                            <ListItemText primary="User 1" />
+                            <ListItemText data-testid="list-list-item-text" primary="User 1" />
                         </ListItemButton>
                     </ListItem>
-                    <ListItem disablePadding>
+                    <ListItem data-testid="list-list-item" disablePadding>
                         <ListItemButton>
                             <ListItemIcon>
-                                <AccountCircle />
+                                <AccountCircle data-testid="list-list-item-icon" />
                             </ListItemIcon>
-                            <ListItemText primary="User 2" />
+                            <ListItemText data-testid="list-list-item-text" primary="User 2" />
                         </ListItemButton>
                     </ListItem>
-                    <ListItem disablePadding>
+                    <ListItem data-testid="list-list-item" disablePadding>
                         <ListItemButton>
                             <ListItemIcon>
-                                <AccountCircle />
+                                <AccountCircle data-testid="list-list-item-icon" />
                             </ListItemIcon>
-                            <ListItemText primary="User 3" />
+                            <ListItemText data-testid="list-list-item-text" primary="User 3" />
                         </ListItemButton>
                     </ListItem>
-                    <ListItem disablePadding>
+                    <ListItem data-testid="list-list-item" disablePadding>
                         <ListItemButton>
                             <ListItemIcon>
-                                <AccountCircle />
+                                <AccountCircle data-testid="list-list-item-icon" />
                             </ListItemIcon>
-                            <ListItemText primary="User 4" />
+                            <ListItemText data-testid="list-list-item-text" primary="User 4" />
                         </ListItemButton>
                     </ListItem>
                 </List>
@@ -161,17 +162,18 @@ const MaterialUIForm = () => {
             <fieldset>
                 <legend><label></label>⚗️ Test 7</legend>
                 <small><strong>Check: React-Testing Library will check Modal rendering and functionality using below button.</strong></small>
-                <Button variant="contained" onClick={() => setModal(true)}>Open Modal</Button>
+                <Button data-testid="modal-open-button" variant="contained" onClick={() => setModal(true)}>Open Modal</Button>
                 <Dialog
                     open={modal}
                     onClose={() => setModal(false)}
+                    data-testid="modal"
                 >
-                    <DialogTitle>Demo Modal</DialogTitle>
+                    <DialogTitle data-testid="modal-title">Demo Modal</DialogTitle>
                     <DialogContent>
-                        <Typography variant="subtitle1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta voluptatibus maxime sint praesentium tempore, reprehenderit quasi ut nesciunt odit perspiciatis?</Typography>
+                        <Typography data-testid="modal-text" variant="subtitle1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta voluptatibus maxime sint praesentium tempore, reprehenderit quasi ut nesciunt odit perspiciatis?</Typography>
                     </DialogContent>
                     <DialogActions>
-                        <Button variant="outlined" onClick={() => setModal(false)}>Close</Button>
+                        <Button data-testid="modal-close-button" variant="outlined" onClick={() => setModal(false)}>Close</Button>
                     </DialogActions>
                 </Dialog>
             </fieldset>
@@ -180,39 +182,39 @@ const MaterialUIForm = () => {
             <fieldset>
                 <legend><label></label>⚗️ Test 8</legend>
                 <small><strong>Check: React-Testing Library will check Menu rendering and functionality using below button.</strong></small>
-                <Button variant="contained" color="secondary" onClick={() => setDrawer(true)}>Open Menu</Button>
-                <SwipeableDrawer anchor="right" onOpen={() => setDrawer(true)} open={drawer} onClose={() => setDrawer(false)}>
+                <Button data-testid="drawer-open-button" variant="contained" color="secondary" onClick={() => setDrawer(true)}>Open Menu</Button>
+                <SwipeableDrawer data-testid="drawer" anchor="right" onOpen={() => setDrawer(true)} open={drawer} onClose={() => setDrawer(false)}>
                     <List>
-                        <ListItem disablePadding>
+                        <ListItem data-testid="drawer-list-item" disablePadding>
                             <ListItemButton>
                                 <ListItemIcon>
-                                    <AccountCircle />
+                                    <AccountCircle data-testid="drawer-list-item-icon" />
                                 </ListItemIcon>
-                                <ListItemText primary="User 1" />
+                                <ListItemText data-testid="drawer-list-item-text" primary="User 1" />
                             </ListItemButton>
                         </ListItem>
-                        <ListItem disablePadding>
+                        <ListItem data-testid="drawer-list-item" disablePadding>
                             <ListItemButton>
                                 <ListItemIcon>
-                                    <AccountCircle />
+                                    <AccountCircle data-testid="drawer-list-item-icon" />
                                 </ListItemIcon>
-                                <ListItemText primary="User 2" />
+                                <ListItemText data-testid="drawer-list-item-text" primary="User 2" />
                             </ListItemButton>
                         </ListItem>
-                        <ListItem disablePadding>
+                        <ListItem data-testid="drawer-list-item" disablePadding>
                             <ListItemButton>
                                 <ListItemIcon>
-                                    <AccountCircle />
+                                    <AccountCircle data-testid="drawer-list-item-icon" />
                                 </ListItemIcon>
-                                <ListItemText primary="User 3" />
+                                <ListItemText data-testid="drawer-list-item-text" primary="User 3" />
                             </ListItemButton>
                         </ListItem>
-                        <ListItem disablePadding>
+                        <ListItem data-testid="drawer-list-item" disablePadding>
                             <ListItemButton>
                                 <ListItemIcon>
-                                    <AccountCircle />
+                                    <AccountCircle data-testid="drawer-list-item-icon" />
                                 </ListItemIcon>
-                                <ListItemText primary="User 4" />
+                                <ListItemText data-testid="drawer-list-item-text" primary="User 4" />
                             </ListItemButton>
                         </ListItem>
                     </List>
