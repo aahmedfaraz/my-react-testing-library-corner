@@ -19,11 +19,11 @@ function App() {
         But the main focus🎯 of this project is implemented <strong>Automatic Testing ⚡</strong>. Throughout all this project I was exploring🧭 the library. So, any from my tech guys if wanna see those testing practices of mine. See the Code💻 and README Docs📖 in the Github Repo using GitHub Code Button up in the navbar.</p>
         <p>- Enjoy ☕ -</p>
         {/* Navbar Tests Output */}
-        <h4>Navbar Tests Output</h4>
+        <h4>Navbar Testing, Output</h4>
         <img className="output-image" src={NavbarTestsOutput} alt="Navbar Tests Output" />
         <h1>Testing React Elements <small>using '@testing-library/react'</small></h1>
         <Form />
-        <h4>Form Tests Output</h4>
+        <h4>React Components Testing, Output</h4>
         <img className="output-image" src={FormTestsOutput} alt="Form Tests Output" />
         <h1>Testing Material UI Elements <small>using '@testing-library/react'</small></h1>
         <MaterialUIForm />
