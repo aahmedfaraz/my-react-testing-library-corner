@@ -1,0 +1,33 @@
+name: Deploying React testing practice project to Surge
+
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Install Node
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: 12
+          
+      - name: Install yarn
+        run: npm install --global yarn
+        
+      - name: Install JS Dependencies
+        run: yarn
+      
+      - name: Run Tests
+        run: yarn test
+        
+      - name: Build React App
+        run: yarn build
+        
+      - name: Install Surge
+        run: yarn global add surge
+        
+      - name: Deploy to Surge
+        run: surge ./build react-testing-ahmedfaraz.surge.sh --token ${{secrets.SURGE_TOKEN}}
