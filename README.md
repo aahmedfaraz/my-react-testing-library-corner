@@ -130,6 +130,21 @@ Visit [https://testing-library.com/docs/react-testing-library/cheatsheet#queries
 # Tips
 
 - I have found if I was using ❌`.innerText` to update any text of an element, it was not accessible by 👉`.toHaveTextContent` of **React Testing Library**, **SOLUTION** is rather than ❌`.innerText` use ✔️`.innerHTML` to update text of any element, then it will work perfectly.
+- For `testing MUI Modal (Drawer)`, keep in mind the states of modal and inside elements before and after opening, to see modal-test see `Field set 7 test` in `MaterialUIForm.test.tsx`.
+
+```js
+// When Modal is Not Opened yet: (Position 1)
+// modal ------------------> null
+// modal-inner-elements ---> null
+//
+// When Modal is Opened: (Position 2)
+// modal ------------------> InTheDocument / visible
+// modal-inner-elements ---> IntheDocument / visible
+//
+// When Modal is Closed again: (Position 3)
+// modal ------------------> InTheDocument / visible
+// modal-inner-elements ---> not.visible
+```
 
 # MATERIAL UI with Typescript
 

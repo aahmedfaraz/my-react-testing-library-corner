@@ -38,15 +38,15 @@ const MaterialUIForm = () => {
                 <small><strong>Check: React-Testing Library will check Icons rendering.</strong></small>
                 <Typography data-testid="icon-heading" variant="h6">Material Icons from Google Icons</Typography>
                 <Stack direction="row" spacing={2}>
-                    <Icon data-testid="mat-done" color="secondary">done</Icon>
-                    <Icon data-testid="mat-info" color="secondary">info</Icon>
-                    <Icon data-testid="mat-check" color="secondary">check_circle</Icon>
+                    <Icon data-testid="mat-icon" color="secondary">done</Icon>
+                    <Icon data-testid="mat-icon" color="secondary">info</Icon>
+                    <Icon data-testid="mat-icon" color="secondary">check_circle</Icon>
                 </Stack>
                 <Typography data-testid="icon-heading" variant="h6">Material UI Icons from MUI Site</Typography>
                 <Stack direction="row" spacing={2}>
-                    <Info data-testid="mui-info" color="secondary" />
-                    <AddCircle data-testid="mui-add" color="secondary" />
-                    <AccountCircle data-testid="mui-account" color="secondary" />
+                    <Info data-testid="mui-icon" color="secondary" />
+                    <AddCircle data-testid="mui-icon" color="secondary" />
+                    <AccountCircle data-testid="mui-icon" color="secondary" />
                 </Stack>
             </fieldset>
 
