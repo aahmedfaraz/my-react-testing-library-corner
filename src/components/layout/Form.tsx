@@ -276,7 +276,7 @@ const Form = () => {
                     }, 5000);
                 }} className="click-event-button">Greetings (after 5s)</button>
                 <small><strong>Check:</strong> Click button and text should display after 5 seconds.</small>
-                <h2 data-testid="timer-text" id="timer-text"></h2>
+                <h2 data-testid="timer-text" id="timer-text">{""}</h2>
             </fieldset>
         </form>
     )
