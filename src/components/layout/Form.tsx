@@ -264,6 +264,20 @@ const Form = () => {
                 <small><strong>Check:</strong> Click button and text on it should display.</small>
                 <h2 data-testid="click-event-text" id="click-event-text">Click any button.</h2>
             </fieldset>
+
+            {/* TEST 8 */}
+            <fieldset>
+                <legend><label>🧪 Test 8</label></legend>
+                <button data-testid="timer-button" onClick={e => {
+                    e.preventDefault();
+                    const text : any = document.getElementById('timer-text');
+                    setTimeout(() => {
+                        text.innerHTML = '👋 Hi there Champ.';
+                    }, 5000);
+                }} className="click-event-button">Greetings (after 5s)</button>
+                <small><strong>Check:</strong> Click button and text should display after 5 seconds.</small>
+                <h2 data-testid="timer-text" id="timer-text"></h2>
+            </fieldset>
         </form>
     )
 }

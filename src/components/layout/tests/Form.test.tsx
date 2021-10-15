@@ -6,13 +6,19 @@ import Form from '../Form';
 
 describe('Form Component', () => {
     
-    beforeEach(() => {render(<Form />)});
-    afterEach(cleanup);
+    beforeEach(() => {
+        jest.useFakeTimers();
+        render(<Form />)
+    });
+    afterEach(() => {
+        jest.useRealTimers();
+        cleanup();
+    });
 
     // Test 1
     test('should render all the fieldsets', () => {
         const fieldSets = screen.getAllByRole('group');
-        expect(fieldSets).toHaveLength(7);
+        expect(fieldSets).toHaveLength(8);
     })
 
     // Test 2
@@ -205,5 +211,19 @@ describe('Form Component', () => {
         fireEvent.click(afternoonButton);
         expect(textHeading).toHaveTextContent('☀️ Good Afternoon Champ.');
     })
-    
+
+    // Test 9 
+    test('should have timer-button section working fine', () => {
+        let button = screen.getByTestId('timer-button');
+        let text = screen.getByTestId('timer-text');
+
+        expect(button).toBeInTheDocument();
+        expect(text).toBeInTheDocument();
+
+        expect(text).toHaveTextContent("");
+        fireEvent.click(button);
+        jest.advanceTimersByTime(5000);
+        expect(text).toHaveTextContent("👋 Hi there Champ.");
+    })
+
 })
